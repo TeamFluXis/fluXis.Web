@@ -1,0 +1,27 @@
+{
+  "name": "fluxis.web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamFluXis/fluXis.Web.git"
+  },
+  "author": "Flustix",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TeamFluXis/fluXis.Web/issues"
+  },
+  "homepage": "https://github.com/TeamFluXis/fluXis.Web#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "tsc": "^2.0.4",
+    "twig": "^1.15.4"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0"
+  }
+}
