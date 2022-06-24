@@ -1,5 +1,14 @@
 node_modules
 dist
 
+# config
+src/config/config.json
+
 # vscode my beloved
 .vscode
+
+# intellij is superior to vsc
+.idea
+
+# symlinks to directories in src so syntax highlighting works
+static/
