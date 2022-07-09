@@ -4,7 +4,7 @@
 <div class="maps">
     {% for map in maps %}
     <div>
-        <h1>{{map.title}}</h1>
+        <a href="/map/{{map.mapid}}"><h3>{{map.title}}</h3></a>
     </div>
     {% endfor %}
 </div>
