@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/TeamFluXis/fluXis.Web#readme",
   "dependencies": {
+    "axios": "^0.27.2",
     "express": "^4.18.1",
     "mariadb": "^3.0.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^3.2.6",
     "tsc": "^2.0.4",
     "twig": "^1.15.4"
   },

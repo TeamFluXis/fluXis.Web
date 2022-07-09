@@ -1,4 +1,5 @@
 import express from "express";
+import ApiRouter from "./api/ApiRouter";
 import Router from "./Router";
 
 export default class Server {
@@ -16,7 +17,7 @@ export default class Server {
 
     private initServer() {
         this.server.use("/", Router.InitializeRouter(this.server));
-        this.server.use("/api", require(__dirname + "/api/api.ts"));
+        this.server.use("/api", ApiRouter.init());
         this.server.use("/static", express.static(__dirname + "/static"));
         this.server.disable('x-powered-by');
         this.server.set("view engine", "twig");

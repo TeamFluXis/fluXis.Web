@@ -1,12 +1,31 @@
-var express = require("express");
-var router = express.Router();
+import * as mysql from "mysql";
+import { sleep } from "../utils/AsyncUtils";
+const config = require('../config/config.json');
 
-var test = require("./test.ts");
+export default class API {
+    public static async executeQuery(query: string):Promise<Array<any>> {
+        var con = mysql.createConnection({
+            host: config.dbHost,
+            user: config.dbUser,
+            password: config.dbPassword,
+            database: config.dbName
+        });
 
-router.get("/", function (req, res, next) {
-    res.send("This is the main API endpoint for fluXis.");
-});
+        var res: Array<any> = [];
+        var done = false;
 
-router.use("/test", test);
+        con.connect(function (err) {
+            if (err) throw err;
 
-module.exports = router;
+            con.query(query, function (err, result) {
+                if (err) throw err;
+                res = result;
+                done = true;
+            });
+        });
+        while (!done) {
+            await sleep(1);
+        }
+        return res;
+    }
+}
