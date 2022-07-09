@@ -1,0 +1,22 @@
+.mapContainer {
+    width: 400px;
+    height: 200px;
+    background-color: #20202060;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    transition: background-color .3s;
+}
+
+.mapContainer:hover {
+    background-color: #88888860;
+}
+
+.mapContainer .mapTitle {
+    margin-top: 10px;
+}
+
+.mapContainer .mapMapper {
+    margin-top: 5px;
+}

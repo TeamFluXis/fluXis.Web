@@ -1,11 +1,20 @@
 {% extends "main/page.twig" %}
+
+{% block styles %}
+<link rel="stylesheet" href="/static/styles/charts.css">
+{% endblock %}
+
 {% block content %}
 <h1>Charts</h1>
 <div class="maps">
     {% for map in maps %}
-    <div>
-        <a href="/map/{{map.mapid}}"><h3>{{map.title}}</h3></a>
-    </div>
+    <a href="/map/{{map.mapid}}">
+        <div class="mapContainer">
+            <h2 class="mapTitle">{{map.title}}</h2>
+            <h3 class="mapArtist">by {{map.artist}}</h3>
+            <p class="mapMapper">mapped by <a href="/users/{{map.mapperid}}">{{map.mapper}}</a></p>
+        </div>
+    </a>
     {% endfor %}
 </div>
 {% endblock %}

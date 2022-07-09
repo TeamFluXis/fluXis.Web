@@ -11,4 +11,4 @@ config/
 .idea
 
 # symlinks to directories in src so syntax highlighting works
-static/
+./static/
