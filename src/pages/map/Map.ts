@@ -3,7 +3,7 @@ import Responses from "../../Response";
 export default class Map {
     public static async GetMap(req: any, res: any): Promise<void> {
         try {
-            return Responses.Send(req, res, "map", "Map", {
+            return Responses.Send(req, res, "map", "map", {
                 mapid: req.params.id
             });
         } catch (ex) {

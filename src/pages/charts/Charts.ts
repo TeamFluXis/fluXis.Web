@@ -6,7 +6,7 @@ export default class Charts {
         try {
             const mapsData = await APIUtils.exec("/maps");
 
-            return Responses.Send(req, res, "charts", "Charts", {
+            return Responses.Send(req, res, "charts", "charts", {
                 maps: mapsData.maps
             });
         } catch (ex) {
