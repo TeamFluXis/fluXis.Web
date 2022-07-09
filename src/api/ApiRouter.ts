@@ -6,7 +6,8 @@ export default class ApiRouter {
     public static init(): express.Router { 
         const router: express.Router = express.Router();
 
-        router.route('/maps').get(ApiMaps.GET);
+        router.route('/maps').get(ApiMaps.getMaps);
+        router.route('/map/:id').get(ApiMaps.getMap);
         router.route("*").get(ApiResponse.send404);
 
         return router;
