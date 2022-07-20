@@ -8,7 +8,7 @@ tsc
 echo "Copying files..."
 cp -R ./config/ ./dist/config
 cp -R ./src/views ./dist/views
-cp -R ./src/static ./dist/static
+cp -R ./src/assets ./dist/assets
 
 echo "Starting Server..."
 cd ./dist

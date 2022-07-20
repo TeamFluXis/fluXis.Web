@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html prefix="og: https://ogp.me/ns#">
     <head>
-        <link rel="stylesheet" href="/static/styles/global.css">
-        <link rel="icon" type="image/png" href="/static/images/favicon.png">
+        <link rel="stylesheet" href="/assets/styles/global.css">
+        <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+
+        <meta property="og:title" content="{{title}} | fluXis" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
+
         <title>{{title}} | fluXis</title>
         {% block styles %}{% endblock %}
     </head>
