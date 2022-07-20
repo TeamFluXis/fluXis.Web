@@ -1,6 +1,6 @@
 import express from "express";
 import ApiRouter from "./api/ApiRouter";
-import Router from "./Router";
+import Router from "./utils/Router";
 
 export default class Server {
     public port: Number;
@@ -16,11 +16,13 @@ export default class Server {
     }
 
     private initServer() {
-        this.server.use("/", Router.InitializeRouter(this.server));
+        this.server.use("/", Router.InitializeRouter());
         this.server.use("/api", ApiRouter.init());
         this.server.use("/static", express.static(__dirname + "/static"));
         this.server.disable('x-powered-by');
         this.server.set("view engine", "twig");
-        this.server.listen(this.port, () => console.log("Server started, listening on port " + this.port));
+        this.server.listen(this.port, () => {
+            console.log("Server started, listening on port " + this.port)
+        });
     }
 }

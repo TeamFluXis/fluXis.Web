@@ -1,4 +1,4 @@
-import Responses from "../../Response";
+import Responses from "../../utils/Response";
 
 export default class NotFound {
     public static async GET(req: any, res: any): Promise<void> {

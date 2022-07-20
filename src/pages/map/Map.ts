@@ -1,4 +1,4 @@
-import Responses from "../../Response";
+import Responses from "../../utils/Response";
 import APIUtils from "../../utils/ApiUtils";
 import NotFound from "../error/NotFound";
 
