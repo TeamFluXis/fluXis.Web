@@ -1,7 +1,7 @@
 .mapContainer {
     width: 400px;
     height: 200px;
-    background-color: #20202060;
+    background-color: #35363a;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
@@ -10,7 +10,7 @@
 }
 
 .mapContainer:hover {
-    background-color: #88888860;
+    background-color: #4d4f55;
 }
 
 .mapContainer .mapTitle {

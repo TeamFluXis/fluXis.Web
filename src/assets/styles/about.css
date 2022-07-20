@@ -1,0 +1,41 @@
+.teamMember {
+    width: 400px;
+    height: 200px;
+    background-color: #35363a;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    display: inline-block;
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.teamMember .memberNameBox {
+    display: flex;
+}
+
+.memberNameBox img {
+    height: 96px;
+    width: 96px;
+    border-radius: 5px;
+}
+
+.memberNameBox p {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.memberNameBox .memberName {
+    font-size: 36px;
+}
+
+.teamMember .memberDesc {
+    margin-top: 15px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .teamMember {
+        width: calc(100% - 70px);
+    }
+}
