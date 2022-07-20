@@ -1,6 +1,6 @@
 @font-face {
     font-family: quicksand;
-    src: url("/static/font/QuicksandSB.ttf");
+    src: url("/assets/font/QuicksandSB.ttf");
 }
 
 * {
@@ -10,7 +10,7 @@
 
 body {
     background-color: #202020;
-    background-image: url("/static/images/bg.png");
+    background-image: url("/assets/images/bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
