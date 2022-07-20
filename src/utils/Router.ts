@@ -6,7 +6,7 @@ import Map from "../pages/map/Map";
 import NotFound from "../pages/error/NotFound";
 
 export default class Router {
-    public static InitializeRouter(): express.Router {
+    public static init(): express.Router {
         const router: express.Router = express.Router();
 
         router.route('/').get(Home.GET);
@@ -20,6 +20,8 @@ export default class Router {
         router.route('/user/:id').get(NotFound.GET);
 
         router.route('/ranks').get(NotFound.GET);
+
+        router.route('*').get(NotFound.GET);
 
         return router;
     }

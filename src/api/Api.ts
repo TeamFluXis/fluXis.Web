@@ -1,6 +1,6 @@
 import * as mysql from "mysql";
 import { sleep } from "../utils/AsyncUtils";
-const config = require('../config/config.json');
+const config = require('./../../config/config.json');
 
 export default class API {
     public static async executeQuery(query: string):Promise<Array<any>> {
@@ -21,6 +21,7 @@ export default class API {
                 if (err) throw err;
                 res = result;
                 done = true;
+                con.end();
             });
         });
         while (!done) {

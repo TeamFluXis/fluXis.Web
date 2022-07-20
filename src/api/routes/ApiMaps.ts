@@ -17,7 +17,14 @@ export default class ApiMaps {
 
     public static async getMap(req: any, res: any): Promise<void> {
         try {
-            await API.executeQuery("SELECT * FROM maps WHERE `mapid` = " + req.params.id).then((result: any) => {
+            var id = parseInt(req.params.id);
+
+            if (isNaN(id)) {
+                ApiResponse.send404(req, res);
+                return;
+            }
+
+            await API.executeQuery("SELECT * FROM maps WHERE `mapid` = " + id).then((result: any) => {
                 ApiResponse.send(req, res, result[0]);
             });
         } catch (ex) {

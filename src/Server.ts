@@ -16,9 +16,9 @@ export default class Server {
     }
 
     private initServer() {
-        this.server.use("/", Router.InitializeRouter());
-        this.server.use("/api", ApiRouter.init());
         this.server.use("/assets", express.static(__dirname + "/assets"));
+        this.server.use("/", Router.init());
+        this.server.use("/api", ApiRouter.init());
         this.server.disable('x-powered-by');
         this.server.set("view engine", "twig");
         this.server.listen(this.port, () => {
